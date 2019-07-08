@@ -13,6 +13,9 @@ class RatingElement(TimeStampedModel):
     class Meta:
         ordering = ('id', )
 
+    def __str__(self):
+        return f'{self.id} - {self.element_type} - {self.score} - {self.comment}'
+
 
 class ObjectRating(TimeStampedModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
