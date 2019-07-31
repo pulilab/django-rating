@@ -27,4 +27,5 @@ class ObjectRating(TimeStampedModel):
     elements = models.ManyToManyField(RatingElement)
 
     class Meta:
+        verbose_name = 'Ratings'
         ordering = ('id', )
